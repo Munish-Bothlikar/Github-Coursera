@@ -1,0 +1,2355 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0807.0327                               -->
+<workbook original-version='18.1' source-build='2024.2.2 (20242.24.0807.0327)' source-platform='win' version='18.1' xml:base='https://localhost' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://vizhub/workbooks/BlueBanksLoansDashboard?rev=1.0' id='BlueBanksLoansDashboard' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Blue_Bank_Cleaned' inline='true' name='federated.1xq34hn0jominr1f21plw0mof7jh' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Blue_Bank_Cleaned' name='textscan.0buhecw05cdebb17hqcd81vqisqe'>
+            <connection class='textscan' directory='C:/Users/munis/OneDrive/Desktop/Tableau/Data/Project 2' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0buhecw05cdebb17hqcd81vqisqe' name='Blue_Bank_Cleaned.csv' table='[Blue_Bank_Cleaned#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='credit_policy' ordinal='1' />
+            <column datatype='string' name='purpose' ordinal='2' />
+            <column datatype='real' name='int_rate' ordinal='3' />
+            <column datatype='real' name='installment' ordinal='4' />
+            <column datatype='real' name='dti' ordinal='5' />
+            <column datatype='integer' name='fico' ordinal='6' />
+            <column datatype='integer' name='days_with_cr_line' ordinal='7' />
+            <column datatype='integer' name='revol_bal' ordinal='8' />
+            <column datatype='integer' name='revol_util' ordinal='9' />
+            <column datatype='integer' name='inq_last_6mths' ordinal='10' />
+            <column datatype='integer' name='delinq_2yrs' ordinal='11' />
+            <column datatype='integer' name='pub_rec' ordinal='12' />
+            <column datatype='integer' name='not_fully_paid' ordinal='13' />
+            <column datatype='real' name='annual_inc' ordinal='14' />
+            <column datatype='string' name='fico_category' ordinal='15' />
+            <column datatype='string' name='int_rate_type' ordinal='16' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0buhecw05cdebb17hqcd81vqisqe' name='Blue_Bank_Cleaned.csv' table='[Blue_Bank_Cleaned#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='credit_policy' ordinal='1' />
+            <column datatype='string' name='purpose' ordinal='2' />
+            <column datatype='real' name='int_rate' ordinal='3' />
+            <column datatype='real' name='installment' ordinal='4' />
+            <column datatype='real' name='dti' ordinal='5' />
+            <column datatype='integer' name='fico' ordinal='6' />
+            <column datatype='integer' name='days_with_cr_line' ordinal='7' />
+            <column datatype='integer' name='revol_bal' ordinal='8' />
+            <column datatype='integer' name='revol_util' ordinal='9' />
+            <column datatype='integer' name='inq_last_6mths' ordinal='10' />
+            <column datatype='integer' name='delinq_2yrs' ordinal='11' />
+            <column datatype='integer' name='pub_rec' ordinal='12' />
+            <column datatype='integer' name='not_fully_paid' ordinal='13' />
+            <column datatype='real' name='annual_inc' ordinal='14' />
+            <column datatype='string' name='fico_category' ordinal='15' />
+            <column datatype='string' name='int_rate_type' ordinal='16' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>credit_policy</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[credit_policy]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>credit_policy</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>purpose</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[purpose]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>purpose</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>int_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[int_rate]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>int_rate</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>installment</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[installment]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>installment</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dti</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[dti]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>dti</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fico</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fico]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>fico</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>days_with_cr_line</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[days_with_cr_line]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>days_with_cr_line</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revol_bal</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[revol_bal]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>revol_bal</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revol_util</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[revol_util]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>revol_util</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>inq_last_6mths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[inq_last_6mths]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>inq_last_6mths</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delinq_2yrs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[delinq_2yrs]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>delinq_2yrs</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pub_rec</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pub_rec]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>pub_rec</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>not_fully_paid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[not_fully_paid]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>not_fully_paid</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>annual_inc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[annual_inc]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>annual_inc</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fico_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fico_category]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>fico_category</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>int_rate_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[int_rate_type]</local-name>
+            <parent-name>[Blue_Bank_Cleaned.csv]</parent-name>
+            <remote-alias>int_rate_type</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Annual Income Group' datatype='string' name='[Calculation_1078893649424252928]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [annual_inc]&lt;10000 then &quot;&lt;10K&quot;&#13;&#10;ELSEIF [annual_inc]&gt;=10000 and [annual_inc]&lt;50000 then &quot;10K to 50K&quot;&#13;&#10;ELSEIF [annual_inc]&gt;=50000 and [annual_inc]&lt;100000 then &quot;50K to 100K&quot;&#13;&#10;ELSEIF [annual_inc]&gt;=100000 and [annual_inc]&lt;250000 then &quot;100K to 250K&quot;&#13;&#10;ELSEIF [annual_inc]&gt;=250000 and [annual_inc]&lt;500000 then &quot;250K to 500K&quot;&#13;&#10;ELSEIF [annual_inc]&gt;=500000 then &quot;&gt;500K&quot;&#13;&#10;ELSE &quot;UNKNOWN&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Total Loans Taken' datatype='integer' name='[Calculation_859061686921895936]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTd([F1])' />
+      </column>
+      <column caption='ID' datatype='integer' name='[F1]' role='measure' type='quantitative' />
+      <column aggregation='None' datatype='integer' name='[Urilization Rate (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[revol_util]' peg='0' size='5' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Blue_Bank_Cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]' role='measure' type='quantitative' />
+      <column caption='Annual Inc' datatype='real' name='[annual_inc]' role='measure' type='quantitative' />
+      <column caption='Credit Policy' datatype='integer' name='[credit_policy]' role='measure' type='quantitative' />
+      <column caption='Days With Cr Line' datatype='integer' name='[days_with_cr_line]' role='measure' type='quantitative' />
+      <column caption='Delinq 2Yrs' datatype='integer' name='[delinq_2yrs]' role='measure' type='quantitative' />
+      <column caption='Dti' datatype='real' name='[dti]' role='measure' type='quantitative' />
+      <column caption='Fico' datatype='integer' name='[fico]' role='measure' type='quantitative' />
+      <column caption='Fico Category' datatype='string' name='[fico_category]' role='dimension' type='nominal' />
+      <column caption='Inq Last 6Mths' datatype='integer' name='[inq_last_6mths]' role='measure' type='quantitative' />
+      <column caption='Installment' datatype='real' name='[installment]' role='measure' type='quantitative' />
+      <column caption='Int Rate' datatype='real' name='[int_rate]' role='measure' type='quantitative' />
+      <column caption='Int Rate Type' datatype='string' name='[int_rate_type]' role='dimension' type='nominal' />
+      <column caption='Not Fully Paid' datatype='integer' name='[not_fully_paid]' role='measure' type='quantitative' />
+      <column caption='Pub Rec' datatype='integer' name='[pub_rec]' role='measure' type='quantitative' />
+      <column caption='Purpose' datatype='string' name='[purpose]' role='dimension' type='nominal' />
+      <column caption='Revol Bal' datatype='integer' name='[revol_bal]' role='measure' type='quantitative' />
+      <column caption='Urilization Rate' datatype='integer' name='[revol_util]' role='measure' type='quantitative' />
+      <column-instance column='[int_rate_type]' derivation='None' name='[none:int_rate_type:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/munis/OneDrive/Desktop/Blue Banks Loans Dashboard.twb Files/Data/TableauTemp/#TableauTemp_0pf71xz02lxeuo1d1ny8l1wz3tuo.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/04/2024 07:53:14 AM' username=''>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9578</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>credit_policy</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[credit_policy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>credit_policy</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>purpose</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[purpose]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>purpose</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>int_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[int_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>int_rate</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>installment</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[installment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>installment</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2837</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dti</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[dti]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dti</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2358</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fico</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[fico]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fico</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>days_with_cr_line</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[days_with_cr_line]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>days_with_cr_line</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1051</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>revol_bal</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[revol_bal]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>revol_bal</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5030</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>revol_util</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[revol_util]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>revol_util</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>104</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>inq_last_6mths</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[inq_last_6mths]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>inq_last_6mths</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>29</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>delinq_2yrs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[delinq_2yrs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>delinq_2yrs</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pub_rec</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[pub_rec]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pub_rec</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>not_fully_paid</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[not_fully_paid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>not_fully_paid</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>annual_inc</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[annual_inc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>annual_inc</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1088</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fico_category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[fico_category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fico_category</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>int_rate_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[int_rate_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>int_rate_type</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Blue_Bank_Cleaned.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:int_rate_type:nk]' type='palette'>
+            <map to='#6a9bc3'>
+              <bucket>&quot;High&quot;</bucket>
+            </map>
+            <map to='#7c878d'>
+              <bucket>&quot;Low&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Blue_Bank_Cleaned.csv' id='Blue_Bank_Cleaned.csv_0A2F31666B534B518E823C1D47F2DA82'>
+            <properties context=''>
+              <relation connection='textscan.0buhecw05cdebb17hqcd81vqisqe' name='Blue_Bank_Cleaned.csv' table='[Blue_Bank_Cleaned#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='integer' name='credit_policy' ordinal='1' />
+                  <column datatype='string' name='purpose' ordinal='2' />
+                  <column datatype='real' name='int_rate' ordinal='3' />
+                  <column datatype='real' name='installment' ordinal='4' />
+                  <column datatype='real' name='dti' ordinal='5' />
+                  <column datatype='integer' name='fico' ordinal='6' />
+                  <column datatype='integer' name='days_with_cr_line' ordinal='7' />
+                  <column datatype='integer' name='revol_bal' ordinal='8' />
+                  <column datatype='integer' name='revol_util' ordinal='9' />
+                  <column datatype='integer' name='inq_last_6mths' ordinal='10' />
+                  <column datatype='integer' name='delinq_2yrs' ordinal='11' />
+                  <column datatype='integer' name='pub_rec' ordinal='12' />
+                  <column datatype='integer' name='not_fully_paid' ordinal='13' />
+                  <column datatype='real' name='annual_inc' ordinal='14' />
+                  <column datatype='string' name='fico_category' ordinal='15' />
+                  <column datatype='string' name='int_rate_type' ordinal='16' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_AA4CD8A8601147FBBDA1DD2C3A1052D0]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Blue Bank Loans' type='sheet' worksheet='Loans by Interest Type' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Blue Bank Loans' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_7AA22F8A2DA44E229C2F2AAC4A94CB23]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Blue Bank Loans' type='sheet' worksheet='Number of Loans by Credit Score' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Blue Bank Loans' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3_FE4D45B30F40465189515452015D592F]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Blue Bank Loans' type='sheet' worksheet='Number of Loans by Income Group' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Blue Bank Loans' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Avg. DTI Ratio'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://vizhub/workbooks/BlueBanksLoansDashboard/Avg_DTIRatio?rev=' id='106011621' path='/workbooks/BlueBanksLoansDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Blue_Bank_Cleaned' name='federated.1xq34hn0jominr1f21plw0mof7jh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xq34hn0jominr1f21plw0mof7jh'>
+            <column-instance column='[dti]' derivation='Avg' name='[avg:dti:qk]' pivot='key' type='quantitative' />
+            <column caption='Dti' datatype='real' name='[dti]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='1' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1xq34hn0jominr1f21plw0mof7jh].[avg:dti:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='15'><![CDATA[<[federated.1xq34hn0jominr1f21plw0mof7jh].[avg:dti:qk]>]]></run>
+                <run>&#10;Avg. Debt to Income&#10;Ratio</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='normal' />
+                <format attr='font-family' value='Tableau Book' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#75a1c7' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1xq34hn0jominr1f21plw0mof7jh].[Urilization Rate (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{1F2438F1-4BDF-4BDD-9168-A7181EEFF32F}' />
+    </worksheet>
+    <worksheet name='Avg. Days with Credit line'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://vizhub/workbooks/BlueBanksLoansDashboard/Avg_DayswithCreditline?rev=' id='106011622' path='/workbooks/BlueBanksLoansDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Blue_Bank_Cleaned' name='federated.1xq34hn0jominr1f21plw0mof7jh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xq34hn0jominr1f21plw0mof7jh'>
+            <column-instance column='[days_with_cr_line]' derivation='Avg' name='[avg:days_with_cr_line:qk]' pivot='key' type='quantitative' />
+            <column caption='Days With Cr Line' datatype='integer' name='[days_with_cr_line]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='1' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1xq34hn0jominr1f21plw0mof7jh].[avg:days_with_cr_line:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='15'><![CDATA[<[federated.1xq34hn0jominr1f21plw0mof7jh].[avg:days_with_cr_line:qk]>]]></run>
+                <run>&#10;Avg. Days with&#10;Credit Line</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='normal' />
+                <format attr='font-family' value='Tableau Book' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#75a1c7' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1xq34hn0jominr1f21plw0mof7jh].[Urilization Rate (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{41234219-483E-48C4-B9B7-1CBEED7DDB15}' />
+    </worksheet>
+    <worksheet name='Loans by Interest Type'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://vizhub/workbooks/BlueBanksLoansDashboard/LoansbyInterestType?rev=' id='106011617' path='/workbooks/BlueBanksLoansDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Blue_Bank_Cleaned' name='federated.1xq34hn0jominr1f21plw0mof7jh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xq34hn0jominr1f21plw0mof7jh'>
+            <column caption='Total Loans Taken' datatype='integer' name='[Calculation_859061686921895936]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTd([F1])' />
+            </column>
+            <column caption='ID' datatype='integer' name='[F1]' role='measure' type='quantitative' />
+            <column caption='Int Rate Type' datatype='string' name='[int_rate_type]' role='dimension' type='nominal' />
+            <column-instance column='[int_rate_type]' derivation='None' name='[none:int_rate_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_859061686921895936]' derivation='User' name='[pcto:usr:Calculation_859061686921895936:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Calculation_859061686921895936]' derivation='User' name='[usr:Calculation_859061686921895936:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]' />
+              <wedge-size column='[federated.1xq34hn0jominr1f21plw0mof7jh].[usr:Calculation_859061686921895936:qk]' />
+              <text column='[federated.1xq34hn0jominr1f21plw0mof7jh].[pcto:usr:Calculation_859061686921895936:qk]' />
+              <text column='[federated.1xq34hn0jominr1f21plw0mof7jh].[usr:Calculation_859061686921895936:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.1xq34hn0jominr1f21plw0mof7jh].[usr:Calculation_859061686921895936:qk]</run>
+                <run>&gt;&#10;&lt;</run>
+                <run>[federated.1xq34hn0jominr1f21plw0mof7jh].[pcto:usr:Calculation_859061686921895936:qk]</run>
+                <run>&gt;&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{AA3E152B-5CD6-4D9F-93D0-0002F60E4AA4}' />
+    </worksheet>
+    <worksheet name='Max. Interest Rate'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://vizhub/workbooks/BlueBanksLoansDashboard/Max_InterestRate?rev=' id='106011627' path='/workbooks/BlueBanksLoansDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Blue_Bank_Cleaned' name='federated.1xq34hn0jominr1f21plw0mof7jh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xq34hn0jominr1f21plw0mof7jh'>
+            <column caption='Int Rate' datatype='real' name='[int_rate]' role='measure' type='quantitative' />
+            <column-instance column='[int_rate]' derivation='Max' name='[max:int_rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='1' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1xq34hn0jominr1f21plw0mof7jh].[max:int_rate:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1xq34hn0jominr1f21plw0mof7jh].[max:int_rate:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='15'><![CDATA[<[federated.1xq34hn0jominr1f21plw0mof7jh].[max:int_rate:qk]>]]></run>
+                <run>&#10;Maximum Interest&#10;Rate</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='normal' />
+                <format attr='font-family' value='Tableau Book' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#75a1c7' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1xq34hn0jominr1f21plw0mof7jh].[Urilization Rate (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{1BE7869A-73FB-4195-B376-0497827F4123}' />
+    </worksheet>
+    <worksheet name='Max. Revol. Balance'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://vizhub/workbooks/BlueBanksLoansDashboard/Max_Revol_Balance?rev=' id='106011623' path='/workbooks/BlueBanksLoansDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Blue_Bank_Cleaned' name='federated.1xq34hn0jominr1f21plw0mof7jh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xq34hn0jominr1f21plw0mof7jh'>
+            <column-instance column='[revol_bal]' derivation='Max' name='[max:revol_bal:qk]' pivot='key' type='quantitative' />
+            <column caption='Revol Bal' datatype='integer' name='[revol_bal]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='1' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1xq34hn0jominr1f21plw0mof7jh].[max:revol_bal:qk]' value='c&quot;$&quot;#,##0,K;(&quot;$&quot;#,##0,K)' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1xq34hn0jominr1f21plw0mof7jh].[max:revol_bal:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='15'><![CDATA[<[federated.1xq34hn0jominr1f21plw0mof7jh].[max:revol_bal:qk]>]]></run>
+                <run>&#10;Maximum Revolving&#10;Balance</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='normal' />
+                <format attr='font-family' value='Tableau Book' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#75a1c7' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1xq34hn0jominr1f21plw0mof7jh].[Urilization Rate (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{0623B552-3375-4EED-9CC8-8339FF096BCF}' />
+    </worksheet>
+    <worksheet name='Min. Interest Rate'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://vizhub/workbooks/BlueBanksLoansDashboard/Min_InterestRate?rev=' id='106011625' path='/workbooks/BlueBanksLoansDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Blue_Bank_Cleaned' name='federated.1xq34hn0jominr1f21plw0mof7jh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xq34hn0jominr1f21plw0mof7jh'>
+            <column caption='Int Rate' datatype='real' name='[int_rate]' role='measure' type='quantitative' />
+            <column-instance column='[int_rate]' derivation='Min' name='[min:int_rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='1' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1xq34hn0jominr1f21plw0mof7jh].[min:int_rate:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1xq34hn0jominr1f21plw0mof7jh].[min:int_rate:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='15'><![CDATA[<[federated.1xq34hn0jominr1f21plw0mof7jh].[min:int_rate:qk]>]]></run>
+                <run>&#10;Minimum Interest&#10;Rate</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='normal' />
+                <format attr='font-family' value='Tableau Book' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#75a1c7' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1xq34hn0jominr1f21plw0mof7jh].[Urilization Rate (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{B8298A2F-8B95-4ABD-B234-F11556DDB510}' />
+    </worksheet>
+    <worksheet name='Number of Loans by Credit Score'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://vizhub/workbooks/BlueBanksLoansDashboard/NumberofLoansbyCreditScore?rev=' id='106011618' path='/workbooks/BlueBanksLoansDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Blue_Bank_Cleaned' name='federated.1xq34hn0jominr1f21plw0mof7jh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xq34hn0jominr1f21plw0mof7jh'>
+            <column caption='Total Loans Taken' datatype='integer' name='[Calculation_859061686921895936]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTd([F1])' />
+            </column>
+            <column caption='ID' datatype='integer' name='[F1]' role='measure' type='quantitative' />
+            <column caption='Fico Category' datatype='string' name='[fico_category]' role='dimension' type='nominal' />
+            <column-instance column='[fico_category]' derivation='None' name='[none:fico_category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_859061686921895936]' derivation='User' name='[usr:Calculation_859061686921895936:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.1xq34hn0jominr1f21plw0mof7jh].[none:fico_category:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Good&quot;</bucket>
+              <bucket>&quot;Excellent&quot;</bucket>
+              <bucket>&quot;Fair&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='1' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='normal' />
+                <format attr='font-family' value='Tableau Book' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#75a1c7' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:fico_category:nk]</rows>
+        <cols>[federated.1xq34hn0jominr1f21plw0mof7jh].[usr:Calculation_859061686921895936:qk]</cols>
+      </table>
+      <simple-id uuid='{CB41E719-049A-49B1-B368-F0E4DF6F96BA}' />
+    </worksheet>
+    <worksheet name='Number of Loans by Income Group'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://vizhub/workbooks/BlueBanksLoansDashboard/NumberofLoansbyIncomeGroup?rev=' id='106011620' path='/workbooks/BlueBanksLoansDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Blue_Bank_Cleaned' name='federated.1xq34hn0jominr1f21plw0mof7jh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xq34hn0jominr1f21plw0mof7jh'>
+            <column caption='Annual Income Group' datatype='string' name='[Calculation_1078893649424252928]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [annual_inc]&lt;10000 then &quot;&lt;10K&quot;&#13;&#10;ELSEIF [annual_inc]&gt;=10000 and [annual_inc]&lt;50000 then &quot;10K to 50K&quot;&#13;&#10;ELSEIF [annual_inc]&gt;=50000 and [annual_inc]&lt;100000 then &quot;50K to 100K&quot;&#13;&#10;ELSEIF [annual_inc]&gt;=100000 and [annual_inc]&lt;250000 then &quot;100K to 250K&quot;&#13;&#10;ELSEIF [annual_inc]&gt;=250000 and [annual_inc]&lt;500000 then &quot;250K to 500K&quot;&#13;&#10;ELSEIF [annual_inc]&gt;=500000 then &quot;&gt;500K&quot;&#13;&#10;ELSE &quot;UNKNOWN&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Total Loans Taken' datatype='integer' name='[Calculation_859061686921895936]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTd([F1])' />
+            </column>
+            <column caption='ID' datatype='integer' name='[F1]' role='measure' type='quantitative' />
+            <column caption='Annual Inc' datatype='real' name='[annual_inc]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1078893649424252928]' derivation='None' name='[none:Calculation_1078893649424252928:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_859061686921895936]' derivation='User' name='[usr:Calculation_859061686921895936:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.1xq34hn0jominr1f21plw0mof7jh].[none:Calculation_1078893649424252928:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;&lt;10K&quot;</bucket>
+              <bucket>&quot;10K to 50K&quot;</bucket>
+              <bucket>&quot;50K to 100K&quot;</bucket>
+              <bucket>&quot;100K to 250K&quot;</bucket>
+              <bucket>&quot;250K to 500K&quot;</bucket>
+              <bucket>&quot;&gt;500K&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='1' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1xq34hn0jominr1f21plw0mof7jh].[usr:Calculation_859061686921895936:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='normal' />
+                <format attr='font-family' value='Tableau Book' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#75a1c7' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:Calculation_1078893649424252928:nk]</rows>
+        <cols>[federated.1xq34hn0jominr1f21plw0mof7jh].[usr:Calculation_859061686921895936:qk]</cols>
+        <show-full-range>
+          <column>[federated.1xq34hn0jominr1f21plw0mof7jh].[Urilization Rate (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{8310E96D-BE43-41C2-BD8C-611860C13D94}' />
+    </worksheet>
+    <worksheet name='Number of Loans by Utilization Rate'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://vizhub/workbooks/BlueBanksLoansDashboard/NumberofLoansbyUtilizationRate?rev=' id='106011619' path='/workbooks/BlueBanksLoansDashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Blue_Bank_Cleaned' name='federated.1xq34hn0jominr1f21plw0mof7jh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xq34hn0jominr1f21plw0mof7jh'>
+            <column caption='Total Loans Taken' datatype='integer' name='[Calculation_859061686921895936]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTd([F1])' />
+            </column>
+            <column caption='ID' datatype='integer' name='[F1]' role='measure' type='quantitative' />
+            <column aggregation='None' datatype='integer' name='[Urilization Rate (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='0' formula='[revol_util]' peg='0' size='5' />
+            </column>
+            <column-instance column='[revol_util]' derivation='Count' name='[cnt:revol_util:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Urilization Rate (bin)]' derivation='None' name='[none:Urilization Rate (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Urilization Rate' datatype='integer' name='[revol_util]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_859061686921895936]' derivation='User' name='[usr:Calculation_859061686921895936:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='1' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <text column='[federated.1xq34hn0jominr1f21plw0mof7jh].[usr:Calculation_859061686921895936:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='normal' />
+                <format attr='font-family' value='Tableau Book' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#75a1c7' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1xq34hn0jominr1f21plw0mof7jh].[cnt:revol_util:qk]</rows>
+        <cols>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:Urilization Rate (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.1xq34hn0jominr1f21plw0mof7jh].[Urilization Rate (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{F6DA52BF-DCFF-436B-9A86-76E7658D2F80}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Blue Bank Loans'>
+      <repository-location derived-from='https://vizhub/workbooks/BlueBanksLoansDashboard/BlueBankLoans?rev=' id='106011628' path='/workbooks/BlueBanksLoansDashboard' revision='' />
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#e6e6e6' />
+        </style-rule>
+      </style>
+      <size maxheight='860' maxwidth='1250' minheight='600' minwidth='1250' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='80891' id='7' param='horz' type-v2='layout-flow' w='98720' x='640' y='18171'>
+            <zone h='80891' id='5' type-v2='layout-basic' w='98720' x='640' y='18171'>
+              <zone h='38335' id='3' name='Loans by Interest Type' w='49360' x='640' y='18171'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='38335' id='9' name='Number of Loans by Utilization Rate' w='49360' x='50000' y='18171'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='42556' id='10' name='Number of Loans by Credit Score' w='49360' x='640' y='56506'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='42556' id='11' name='Number of Loans by Income Group' w='49360' x='50000' y='56506'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='17233' id='12' param='horz' type-v2='layout-flow' w='11440' x='640' y='938'>
+            <zone h='17233' id='13' is-centered='0' is-scaled='1' param='C:/Users/munis/OneDrive/Desktop/Blue Banks Loans Dashboard.twb Files/Image/Blue+Bank+Logo.png' type-v2='bitmap' w='11440' x='640' y='938'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='17233' id='14' type-v2='text' w='25246' x='12080' y='938'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='16'>Blue Bank Loans Dashboard</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#000000'>My Python Script Link:</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run auto-url='true' bold='true' fontalignment='1' fontcolor='#000000' hyperlink='tabdoc:load-url url=&amp;quot;https://github.com/Munish-Bothlikar/Data-Analytics/blob/main/Blue_Bank_Loans.py&amp;quot;'>https://github.com/Munish-Bothlikar/Data-Analytics/blob/main/Blue_Bank_Loans.py</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='17233' id='15' name='Min. Interest Rate' show-title='false' w='12674' x='37326' y='938'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='17233' id='16' name='Avg. Days with Credit line' show-title='false' w='11941' x='50000' y='938'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='17233' id='17' name='Max. Interest Rate' show-title='false' w='11840' x='87520' y='938'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='17233' id='18' name='Max. Revol. Balance' show-title='false' w='13636' x='73884' y='938'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='17233' id='19' name='Avg. DTI Ratio' show-title='false' w='11943' x='61941' y='938'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='6800' id='8' name='Loans by Interest Type' pane-specification-id='0' param='[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]' type-v2='color' w='11667' x='38750' y='23798' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2200' minheight='2200' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='31' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98124' id='30' param='vert' type-v2='layout-flow' w='98720' x='640' y='938'>
+                <zone fixed-size='140' h='17233' id='13' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/munis/OneDrive/Desktop/Blue Banks Loans Dashboard.twb Files/Image/Blue+Bank+Logo.png' type-v2='bitmap' w='11440' x='640' y='938'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='17233' id='14' type-v2='text' w='25246' x='12080' y='938'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='16'>Blue Bank Loans Dashboard</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontcolor='#000000'>My Python Script Link:</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run auto-url='true' bold='true' fontalignment='1' fontcolor='#000000' hyperlink='tabdoc:load-url url=&amp;quot;https://github.com/Munish-Bothlikar/Data-Analytics/blob/main/Blue_Bank_Loans.py&amp;quot;'>https://github.com/Munish-Bothlikar/Data-Analytics/blob/main/Blue_Bank_Loans.py</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='140' h='17233' id='15' is-fixed='true' name='Min. Interest Rate' show-title='false' w='12674' x='37326' y='938'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='140' h='17233' id='16' is-fixed='true' name='Avg. Days with Credit line' show-title='false' w='11941' x='50000' y='938'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='140' h='17233' id='19' is-fixed='true' name='Avg. DTI Ratio' show-title='false' w='11943' x='61941' y='938'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='140' h='17233' id='18' is-fixed='true' name='Max. Revol. Balance' show-title='false' w='13636' x='73884' y='938'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='140' h='17233' id='17' is-fixed='true' name='Max. Interest Rate' show-title='false' w='11840' x='87520' y='938'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38335' id='3' is-fixed='true' name='Loans by Interest Type' w='49360' x='640' y='18171'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6800' id='8' name='Loans by Interest Type' pane-specification-id='0' param='[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]' type-v2='color' w='11667' x='38750' y='23798'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38335' id='9' is-fixed='true' name='Number of Loans by Utilization Rate' w='49360' x='50000' y='18171'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42556' id='10' is-fixed='true' name='Number of Loans by Credit Score' w='49360' x='640' y='56506'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42556' id='11' is-fixed='true' name='Number of Loans by Income Group' w='49360' x='50000' y='56506'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{FE8E527F-C746-4A32-88D0-D7B5E10A2878}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Loans by Interest Type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A6E39EA8-B62D-4F15-AD12-EA963F745F69}' />
+    </window>
+    <window class='worksheet' name='Number of Loans by Credit Score'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:fico_category:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0D1FBD74-67BA-42DE-AE19-1F3F9436F321}' />
+    </window>
+    <window class='worksheet' name='Number of Loans by Utilization Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:fico_category:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1C1CBC36-9EEA-42BA-B649-8B7956A520EC}' />
+    </window>
+    <window class='worksheet' name='Number of Loans by Income Group'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:Calculation_1078893649424252928:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:fico_category:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C745793E-EC0D-490A-95C8-4249F5BFD03E}' />
+    </window>
+    <window class='worksheet' name='Avg. DTI Ratio'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:Calculation_1078893649424252928:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:fico_category:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3691E5B4-9017-48ED-969F-AC095FA4C5D5}' />
+    </window>
+    <window class='worksheet' name='Avg. Days with Credit line'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:Calculation_1078893649424252928:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:fico_category:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{452EF11F-4369-417A-9B27-6EF7F735F753}' />
+    </window>
+    <window class='worksheet' name='Max. Revol. Balance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:Calculation_1078893649424252928:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:fico_category:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{470E178D-7CF0-4A0C-B21A-3F40FBDD886A}' />
+    </window>
+    <window class='worksheet' name='Min. Interest Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[min:int_rate:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>0.059999999999999998</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:Calculation_1078893649424252928:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:fico_category:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9E8F1854-3141-4925-B796-F2F95D81896B}' />
+    </window>
+    <window class='worksheet' name='Max. Interest Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:Calculation_1078893649424252928:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:fico_category:nk]</field>
+            <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A055BA2E-8B22-41A6-8787-AA7111E48400}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Blue Bank Loans'>
+      <viewpoints>
+        <viewpoint name='Avg. DTI Ratio'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Avg. Days with Credit line'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Loans by Interest Type'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1xq34hn0jominr1f21plw0mof7jh].[none:int_rate_type:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Max. Interest Rate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Max. Revol. Balance'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Min. Interest Rate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Number of Loans by Credit Score'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Number of Loans by Income Group'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Number of Loans by Utilization Rate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{EC4B00E6-9DDC-40F5-A578-FA00EAB4B0ED}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Blue Bank Loans' width='192'>
+      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
+      AABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
